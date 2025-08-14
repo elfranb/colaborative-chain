@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Chain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#add">Add Link</a></li>
+                <li><a href="#ranking">Ranking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to Collaborative Chain</h1>
+            <p>Inspired by wplace/r/place, here we build collaborative chains by country. Choose a country when signing up, add links every 5 minutes, and compete in the global chain length ranking.</p>
+            <p>Current user: <span id="current-user">Not signed in</span></p>
+            <button id="logout" style="display:none;">Sign Out</button>
+        </section>
+
+        <section id="signup">
+            <h2>Sign Up</h2>
+            <form id="register-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <label for="country">Country:</label>
+                <select id="country" required>
+                    <option value="">Select a country</option>
+                    <option value="United States">United States</option>
+                    <option value="France">France</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Japan">Japan</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Papulandia">Papulandia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Russia">Russia</option>
+                </select>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="register-msg"></p>
+        </section>
+
+        <section id="add">
+            <h2>Add Link</h2>
+            <p>Selected country: <span id="user-country">Not signed in</span></p>
+            <form id="add-form" style="display:none;">
+                <label for="eslabon">Link (text or URL):</label>
+                <input type="text" id="eslabon" placeholder="Enter your link" required>
+                <button type="submit" id="add-btn">Add</button>
+            </form>
+            <p id="add-msg"></p>
+            <p>Time until next link: <span id="timer">0:00</span></p>
+            <div id="chain-display">
+                <h3>Current chain for the country:</h3>
+                <ul id="chain-list"></ul>
+            </div>
+        </section>
+
+        <section id="ranking">
+            <h2>Global Ranking</h2>
+            <ul id="ranking-list"></ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Enter your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <p id="contact-msg"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
